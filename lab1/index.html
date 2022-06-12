@@ -5,8 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>hello</h1>
+    <table>
+      <caption>
+        Java Script Lab 1
+      </caption>
+      <thead class="bg-gray">
+        <tr>
+          <th>Homework</th>
+          <th>My code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>
+              Viết hàm USD2VND(n), hàm nhận một tham số (input) n là số tiền
+              USD, tính và in ra số tiền tương ứng theo mệnh giá Việt Nam theo
+              công thức:
+            </p>
+            <p>VND = USD * 23.500</p>
+          </td>
+          <td>
+            <pre class="bg-black text-white pd-10 bdr-2 wrap-content"><code>let USD2VND = function (n) {
+  let m = n * 23500;
+  console.log(`${n} USD = ${m} VND`);
+};
+
+USD2VND(34);
+               </code>
+            </pre>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Tính lãi suất kép ngân hàng</p>
+            <p>
+              Viết hàm compoundInterest(P, r, e, t), hàm nhận 4 tham số (input):
+            </p>
+            <p>P: số tiền gốc ban đầu</p>
+            <p>r: lãi suất hàng năm</p>
+            <p>e: số lần ghép lãi 1 năm (*)</p>
+            <p>t: số năm gửi ngân hàng</p>
+            <p>Công thức: A = P * (1 + r / n)**(n * t)</p>
+          </td>
+          <td>
+            <pre
+              class="bg-black text-white pd-10 bdr-2 wrap-content"
+            ><code>let compoundInterest = function (P, r, t) {
+  const e = 12;
+  let A = P * (1 + r / e) ** (e * t);
+  console.log(
+    `If you deposit VND${P}  in a bank with an interest rate of ${r} %/year, after ${t} years you will receive VND${A} `
+  );
+};
+
+compoundInterest(1000000, 0.6, 0.5);
+</code>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
   </body>
 </html>
